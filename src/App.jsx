@@ -1,4 +1,4 @@
-import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import {createBrowserRouter,RouterProvider,BrowserRouter} from 'react-router-dom';
 import './App.css'
 import LoginSignup from './pages/loginSignup';
 import Landing from './pages/landing';
@@ -86,7 +86,9 @@ function App() {
 
   return (
     <MyProvider>
-      <RouterProvider router={router}/>
+      <BrowserRouter basename="/adminSiteTemp">
+        <RouterProvider router={router} />
+      </BrowserRouter>
     </MyProvider>
   )
 }
